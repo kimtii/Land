@@ -10,8 +10,14 @@ with DAG(
      catchup=False,
 ) as dag :
 
-    @task(task_id="print_the_context")
+    #@task(task_id="print_the_context")
     def print_context():
         print("Hellow!!!")
+    
+    print_the_context = PythonOperator(
+        task_id="print_the_context",
+        python_callable=print_context,
+        dag=dag
+    )
 
     print_the_context = print_context()
