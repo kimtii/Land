@@ -22,7 +22,8 @@
 
 #     print_the_context = print_context()
 
-from Database import Database
+# from Database import Database
 
-db = Database()
-print(db.fetchall("select 1"))
+# db = Database()
+# print(db.fetchall("select 1"))
+
